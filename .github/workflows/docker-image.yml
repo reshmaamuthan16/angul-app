@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build -t angul-example.
+      run: docker build -t angul-example .
       
     - name: Run the Docker image
       run: docker run -p84:80 angul-example
