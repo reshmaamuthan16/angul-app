@@ -16,3 +16,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ang-example:$(date +%s)
+    - name: Run the Docker image
+      run: docker run . --file Dockerfile -port 84:80 ang-example:$(date +%s)
