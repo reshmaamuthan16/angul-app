@@ -17,7 +17,7 @@ jobs:
         uses: docker/login-action@v1 
         with:
           username: reshmaamuthan16
-          password: reshmareshu16
+          password: Reshma2000
       -
        name: Build and push
        id: docker_build
