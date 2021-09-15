@@ -20,8 +20,5 @@ jobs:
           password: Reshma2000
       -
        name: Build and push
-       id: docker_build
        uses: docker/build-push-action@v2
-       with:
-          push: true
-          tags: user/app:latest
+   
