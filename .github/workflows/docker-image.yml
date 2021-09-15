@@ -8,14 +8,15 @@ on:
 
 jobs:
 
-  docker:
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      -
-       name: pull
-       run: docker pull ang-example
-      -
-       name: Build and push
-       uses: docker/build-push-action@v2
-       
+    - uses: actions/checkout@v2
+    - name: Docker images
+      run: docker images
+      
+
+ 
     
