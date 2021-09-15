@@ -15,8 +15,18 @@ jobs:
     steps:
        - uses: actions/checkout@v2
       
-       - name: docker image
-         run: docker images
-
+   -
+        name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.reshmaamuthan16 }}
+          password: ${{ secrets.reshmareshu16}}
+      -
+        name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: user/app:latest
  
     
