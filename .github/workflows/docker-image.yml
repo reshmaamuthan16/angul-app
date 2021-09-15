@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-       name: serve
-       run: ng serve
+       name: pull
+       run: docker pull ang-example
       -
        name: Build and push
        uses: docker/build-push-action@v2
