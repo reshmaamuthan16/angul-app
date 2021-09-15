@@ -14,7 +14,7 @@ jobs:
 
     steps:
        - uses: actions/checkout@v2
-       - name: Build and Run the Docker image
+       - name: Build  the Docker image
          run: docker build -t ang-example .
        - 
          name: Login to DockerHub
@@ -23,11 +23,8 @@ jobs:
           username: reshmaamuthan16 
           password: Reshma2000
        -
-         name: Build and push
-         id: docker_build
-         uses: docker/build-push-action@v2
-         with:
-          push: true
-          tags: user/app:latest
+         name: push the docker image
+         uses: actions/checkout@v2
+         run: docker push ang-example
  
     
