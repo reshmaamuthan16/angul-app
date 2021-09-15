@@ -14,8 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Docker images
-      run: docker images
+    - name: Docker logout
+      run: docker logout
       
 
  
