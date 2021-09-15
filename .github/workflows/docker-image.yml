@@ -21,4 +21,8 @@ jobs:
       -
        name: Build and push
        uses: docker/build-push-action@v2
+       
+      - 
+        name: tag docker image
+        run: docker tag ang-example reshmaamuthan16/angularr
    
